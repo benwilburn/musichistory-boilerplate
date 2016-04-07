@@ -1,0 +1,20 @@
+body {
+	margin: 35px;
+}
+
+.navdiv {
+	border: 1px;
+	border-style: solid;
+	background-color: #FFB4B0;
+
+}
+
+.top-nav li {
+	display: inline;
+	list-style-type: none;
+
+}
+
+.top-nav p {
+	display: inline;
+}
