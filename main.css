@@ -2,8 +2,11 @@ body {
 	margin: 35px;
 }
 
+/****************************
+STYLING FOR NAV BAR
+*****************************/
 .navdiv {
-	border: 1px;
+	border: 2px;
 	border-style: solid;
 	background-color: #FFB4B0;
 
@@ -17,4 +20,16 @@ body {
 
 .top-nav p {
 	display: inline;
+}
+
+/****************************
+STYLING FOR FILTER DIV
+*****************************/
+
+.filterdiv {
+	border: 2px;
+	border-style: solid;
+	background-color: #4DD7FA;
+	width: 30%;
+	height: 80%;
 }
