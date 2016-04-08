@@ -1,15 +1,15 @@
 body {
-	margin: 35px;
+	margin: 100px;
 }
 
 /****************************
 STYLING FOR NAV BAR
 *****************************/
 .navdiv {
-	border: 2px;
+	border: 1.75px;
 	border-style: solid;
 	background-color: #FFB4B0;
-
+	margin-bottom: 10px;
 }
 
 .top-nav li {
@@ -27,9 +27,41 @@ STYLING FOR FILTER DIV
 *****************************/
 
 .filterdiv {
-	border: 2px;
+	border: 1.75px;
 	border-style: solid;
 	background-color: #4DD7FA;
-	width: 30%;
+	width: 20%;
 	height: 80%;
+	padding: 10px;
+	display: inline-block;
 }
+
+.checkbox {
+	display: block;
+
+}
+
+.filterbutton {
+	width: 60%;
+	height: 20px;
+	border: 1.75px;
+	border-style: solid;
+	border-radius: 8px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.divcol{
+	width: auto;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
