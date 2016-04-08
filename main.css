@@ -10,16 +10,21 @@ STYLING FOR NAV BAR
 	border-style: solid;
 	background-color: #FFB4B0;
 	margin-bottom: 10px;
+	height: 45px;
+	width: auto;
+	float: top;
 }
 
 .top-nav li {
 	display: inline;
 	list-style-type: none;
+	font-size: 11px;
 
 }
 
 .top-nav p {
 	display: inline;
+	font-size: 12px;
 }
 
 /****************************
@@ -30,33 +35,100 @@ STYLING FOR FILTER DIV
 	border: 1.75px;
 	border-style: solid;
 	background-color: #4DD7FA;
-	width: 20%;
-	height: 80%;
+	width: auto;
+	height: 325px;
 	padding: 10px;
 	display: inline-block;
+	margin-right: 10px;
+	float:left;
+}
+
+.filterdiv div p {
+	font-size: 13px;
+}
+
+select {
+	border: 2px;
+	border-style: solid;
 }
 
 .checkbox {
 	display: block;
+	padding-left: 15px;
+}
 
+.checkboxborder {
+	border: 2px;
+	border-style: solid;
 }
 
 .filterbutton {
-	width: 60%;
+	width: 80px;
 	height: 20px;
 	border: 1.75px;
 	border-style: solid;
-	border-radius: 8px;
-	font-size: 14px;
+	border-radius: 4px;
+	font-size: 12px;
 	text-align: center;
+}
+
+.buttondiv {
+	text-align: center;
+	padding-top: 70px;
 }
 
 .divcol{
 	width: auto;
-	display: inline-block;
+	display: block;
+	float: left;
 }
 
+.divcol label {
+	font-size: 13px;
+}
 
+.colpadding {
+	padding-left: 15px;
+}
+
+/****************************
+STYLING FOR Song Info DIV
+*****************************/
+
+.infodiv {
+	border: 1.75px;
+	border-style: solid;
+	background-color: #FEFAC0;
+	width: 81.5%;
+	height: 325px;
+	padding: 10px;
+	font-family: arial, helvetica, sans-serif;
+	float: left;
+
+}
+
+.infodiv div {
+	margin-bottom: 20px;
+	padding: 3px;
+}
+
+.songcolor {
+	color:  #785616;
+	display: block;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.songname {
+	padding-left: 12px;
+}
+
+.songname p:not(:first-child) {
+	display: inline;
+	font-size: 11px;
+	padding: 3px;
+}
 
 
 
