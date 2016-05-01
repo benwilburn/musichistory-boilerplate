@@ -1,5 +1,11 @@
-body {
-	margin: 100px;
+* {
+	box-sizing: border-box;
+}
+
+.wholebody {
+	width: 70%;
+	min-width: 700px;
+	margin: 0 auto;
 }
 
 /****************************
@@ -11,8 +17,9 @@ STYLING FOR NAV BAR
 	background-color: #FFB4B0;
 	margin-bottom: 10px;
 	height: 45px;
-	width: auto;
+	width: 99.5%;
 	float: top;
+	min-width: 30%;
 }
 
 .top-nav li {
@@ -35,16 +42,21 @@ STYLING FOR FILTER DIV
 	border: 1.75px;
 	border-style: solid;
 	background-color: #4DD7FA;
-	width: auto;
-	height: 325px;
-	padding: 10px;
+	width: 23%;
+	height: 380px;
+	padding: 1%;
 	display: inline-block;
-	margin-right: 10px;
-	float:left;
+	box-sizing: border-box;
+	margin-right: 8px;
+	min-width: 15%;
 }
 
 .filterdiv div p {
 	font-size: 13px;
+}
+
+.filterdiv div {
+	padding: 1% 0 1% 0;
 }
 
 select {
@@ -54,7 +66,7 @@ select {
 
 .checkbox {
 	display: block;
-	padding-left: 15px;
+	text-align: center;
 }
 
 .checkboxborder {
@@ -63,33 +75,40 @@ select {
 }
 
 .filterbutton {
-	width: 80px;
+	width: 35%;
 	height: 20px;
 	border: 1.75px;
 	border-style: solid;
 	border-radius: 4px;
 	font-size: 12px;
 	text-align: center;
+	margin-top: 12px;
+}
+
+.inputWidth {
+	width: 98%;
 }
 
 .buttondiv {
 	text-align: center;
-	padding-top: 70px;
+/* 	padding-top: 70px; */
+	padding-top: 45%;
 }
 
 .divcol{
 	width: auto;
-	display: block;
-	float: left;
+	display: inline-block;
+	padding-left: 6%;
+	text-align: left;
 }
 
 .divcol label {
 	font-size: 13px;
 }
 
-.colpadding {
-	padding-left: 15px;
-}
+/* .colpadding {
+	padding-right: 50%;
+} */
 
 /****************************
 STYLING FOR Song Info DIV
@@ -99,12 +118,14 @@ STYLING FOR Song Info DIV
 	border: 1.75px;
 	border-style: solid;
 	background-color: #FEFAC0;
-	width: 81.5%;
-	height: 325px;
+	width: 75%;
+	height: 380px;
 	padding: 10px;
 	font-family: arial, helvetica, sans-serif;
-	float: left;
-
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	min-width: 30%;
 }
 
 .infodiv div {
@@ -115,20 +136,22 @@ STYLING FOR Song Info DIV
 .songcolor {
 	color:  #785616;
 	display: block;
-	font-size: 20px;
-	margin-top: 10px;
-	margin-bottom: 5px;
+	font-size: 12px;
+	margin: 5px 0 3px;
+	font-weight: bolder;
+
 }
 
 .songname {
 	padding-left: 12px;
 }
 
+/*
 .songname p:not(:first-child) {
 	display: inline;
-	font-size: 11px;
+	font-size: 8px;
 	padding: 3px;
-}
+} */
 
 
 
