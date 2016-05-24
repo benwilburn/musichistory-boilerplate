@@ -14,15 +14,15 @@
 				<nav class="top-nav">
 					<ul>
 						<li>
-							<a href="#" "List Music">List Music</a>
+							<a id="listMusic" href="#" "List Music">List Music</a>
 						</li>
 						<p>|</p>
 						<li>
-							<a href="#" "Add Music">Add Music</a>
+							<a id="addMusic" href="#" "Add Music">Add Music</a>
 						</li>
 						<p>|</p>
 						<li>
-							<a href="#" "Profile">Profile</a>
+							<a id="profile" href="#" "Profile">Profile</a>
 						</li>
 					</ul>
 				</nav>
@@ -33,100 +33,102 @@
 		<!--
 		Filter Div: Left
 		-->
-		<div class="filterdiv">
-				<div>
-					<p>Song Length:</p>
-				</div>
-				<div>
-					<input class="inputWidth" type="range" name="song length" min="1" max="7" step="0.5" value="2.5">
-				</div>
-				<div>
-					<p>Artist:</p>
-				</div>
-				<div>
-					<select class="inputWidth" name="Artist Name">
-						<option value="Options">Options</option>
-						<option value="Imagine Dragons">Imagine Dragons</option>
-						<option value="Merle Haggard">Merle Haggard</option>
-						<option value="Avenged Sevenfold">Avenged Sevenfold</option>
-						<option value="Explosions in the Sky">Explosions In The Sky</option>
-						<option value="J Cole">J Cole</option>
-					</select>
-				</div>
-				<div>
-					<p>Album:</p>
-				</div>
-				<div>
-						<select class="inputWidth" name="Album">
-						<option value="Options">Options</option>
-						<option value="Night Visions">Night Visions</option>
-						<option value="Back To The Barrooms">Back To The Barrooms</option>
-						<option value="Hail to the King">Hail to the King</option>
-						<option value="The Wilderness">The Wilderness</option>
-						<option value="Forrest Hills Drive">Forrest Hills Drive</option>
-					</select>
-				</div>
-				<div>
-					<p>Genre:</p>
-				</div>
-				<div class="checkbox">
-					<div class="divcol" class="colpadding">
-						<div><label><input type="checkbox" name="Genre" value="Rock">Rock</label></div>
-						<div><label><input type="checkbox" name="Genre" value="Pop">Pop</label></div>
-						<div><label><input type="checkbox" name="Genre" value="Blues">Blues</label></div>
+		<div id="listMusicView">
+			<div class="filterdiv">
+					<div>
+						<p>Song Length:</p>
 					</div>
-					<div class="divcol">
-						<div><label><input type="checkbox" name="Genre" value="Classical">Classical</label></div>
-						<div><label><input type="checkbox" name="Genre" value="Jazz">Jazz</label></div>
-						<div><label><input type="checkbox" name="Genre" value="Hip Hop">Hip Hop</label></div>
+					<div>
+						<input class="inputWidth" type="range" name="song length" min="1" max="7" step="0.5" value="2.5">
 					</div>
-				<div class="buttondiv">
-					<input type="submit" value="Filter" class="filterbutton">
+					<div>
+						<p>Artist:</p>
+					</div>
+					<div>
+						<select class="inputWidth" name="Artist Name">
+							<option value="Options">Options</option>
+							<option value="Imagine Dragons">Imagine Dragons</option>
+							<option value="Merle Haggard">Merle Haggard</option>
+							<option value="Avenged Sevenfold">Avenged Sevenfold</option>
+							<option value="Explosions in the Sky">Explosions In The Sky</option>
+							<option value="J Cole">J Cole</option>
+						</select>
+					</div>
+					<div>
+						<p>Album:</p>
+					</div>
+					<div>
+							<select class="inputWidth" name="Album">
+							<option value="Options">Options</option>
+							<option value="Night Visions">Night Visions</option>
+							<option value="Back To The Barrooms">Back To The Barrooms</option>
+							<option value="Hail to the King">Hail to the King</option>
+							<option value="The Wilderness">The Wilderness</option>
+							<option value="Forrest Hills Drive">Forrest Hills Drive</option>
+						</select>
+					</div>
+					<div>
+						<p>Genre:</p>
+					</div>
+					<div class="checkbox">
+						<div class="divcol" class="colpadding">
+							<div><label><input type="checkbox" name="Genre" value="Rock">Rock</label></div>
+							<div><label><input type="checkbox" name="Genre" value="Pop">Pop</label></div>
+							<div><label><input type="checkbox" name="Genre" value="Blues">Blues</label></div>
+						</div>
+						<div class="divcol">
+							<div><label><input type="checkbox" name="Genre" value="Classical">Classical</label></div>
+							<div><label><input type="checkbox" name="Genre" value="Jazz">Jazz</label></div>
+							<div><label><input type="checkbox" name="Genre" value="Hip Hop">Hip Hop</label></div>
+						</div>
+					<div class="buttondiv">
+						<input type="submit" value="Filter" class="filterbutton">
+					</div>
+					</div>
+			</div>
+
+
+
+		<!--
+		Info Div: Right
+		-->
+			<div id="container" class="infodiv">
+		<!-- 		<div class="songname">
+					<p class="songcolor">Song Name</p>
+					<p>Artist Name</p>
+					<p>|</p>
+					<p>Album Name</p>
+					<p>|</p>
+					<p>Genre</p>
 				</div>
+				<div class="songname">
 				</div>
+				<div class="songname">
+					<p class="songcolor">Song Name</p>
+					 <p>Artist Name</p>
+					<p>|</p>
+					<p>Album Name</p>
+					<p>|</p>
+					<p>Genre</p>
+				</div>
+				<div class="songname">
+					<p class="songcolor">Song Name</p>
+					<p>Artist Name</p>
+					<p>|</p>
+					<p>Album Name</p>
+					<p>|</p>
+					<p>Genre</p>
+				</div> -->
+			</div>
 		</div>
-
-
-
-	<!--
-	Info Div: Right
-	-->
-		<div id="container" class="infodiv">
-	<!-- 		<div class="songname">
-				<p class="songcolor">Song Name</p>
-				<p>Artist Name</p>
-				<p>|</p>
-				<p>Album Name</p>
-				<p>|</p>
-				<p>Genre</p>
-			</div>
-			<div class="songname">
-			</div>
-			<div class="songname">
-				<p class="songcolor">Song Name</p>
-				 <p>Artist Name</p>
-				<p>|</p>
-				<p>Album Name</p>
-				<p>|</p>
-				<p>Genre</p>
-			</div>
-			<div class="songname">
-				<p class="songcolor">Song Name</p>
-				<p>Artist Name</p>
-				<p>|</p>
-				<p>Album Name</p>
-				<p>|</p>
-				<p>Genre</p>
-			</div> -->
-		</div>
-		<div>
+		<div id="addMusicView" class="displayNone">
 			<h3>Add A Song</h3>
 			<input id="song" type="text" placeholder="Song"/>
 			<input id="artist" type="text" placeholder="Artist"/>
 			<input id="album" type="text" placeholder="Album"/>
-			<button id="addSong" type="button"
+			<button id="addSong" type="button">Add Song</button>
 		</div>
-	</div>
 	<script src="songs.js" type="text/javascript" charset="utf-8"></script>
+	<script src="dynamicContent.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
