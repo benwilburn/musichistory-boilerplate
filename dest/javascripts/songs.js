@@ -1,3 +1,4 @@
+'use strict';
 // Each student must add one song to the beginning and the end of the array.
 // Loop over the array and remove any words or characters that obviously don't belong.
 // Students must find and replace the > character in each item with a - character.
@@ -21,12 +22,10 @@ songs = songs.map(function(cleaner) {
   cleaner = cleaner.replace(">", "|");
   cleaner = cleaner.replace("on the album", "|");
   cleaner = cleaner.replace(/[^-\|\w\s]/gi, "");
-  return cleaner
+  return cleaner;
 });
-
-console.log(songs);
 
 for (var i = 0; i < songs.length; i++) {
 	var newSongs = songs[i];
 	content.innerHTML +=  '<div class="songname"><p class="songcolor">' + newSongs + '</p></div>';
-};
+}

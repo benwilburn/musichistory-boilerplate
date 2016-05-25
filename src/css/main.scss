@@ -1,3 +1,9 @@
+$nav-background-color: #FFB4B0;
+$filterdiv-background-color: #4DD7FA;
+$infodiv-background-color: #FEFAC0;
+$alternate-text-color: #785616;
+
+
 * {
 	box-sizing: border-box;
 }
@@ -14,7 +20,7 @@ STYLING FOR NAV BAR
 .navdiv {
 	border: 1.75px;
 	border-style: solid;
-	background-color: #FFB4B0;
+	background-color: $nav-background-color;
 	margin-bottom: 10px;
 	height: 45px;
 	width: 99.5%;
@@ -41,7 +47,7 @@ STYLING FOR FILTER DIV
 .filterdiv {
 	border: 1.75px;
 	border-style: solid;
-	background-color: #4DD7FA;
+	background-color: $filterdiv-background-color;
 	width: 23%;
 	height: 380px;
 	padding: 1%;
@@ -117,7 +123,7 @@ STYLING FOR Song Info DIV
 .infodiv {
 	border: 1.75px;
 	border-style: solid;
-	background-color: #FEFAC0;
+	background-color: $infodiv-background-color;
 	width: 75%;
 	height: 380px;
 	padding: 10px;
@@ -134,7 +140,7 @@ STYLING FOR Song Info DIV
 }
 
 .songcolor {
-	color:  #785616;
+	color: $alternate-text-color;
 	display: block;
 	font-size: 12px;
 	margin: 5px 0 3px;
