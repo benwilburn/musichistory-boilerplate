@@ -1,34 +1,73 @@
 'use strict'
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const jshint = require('gulp-jshint')
-const sassLint = require('gulp-sass-lint')
 
-gulp.task('sass', ['lint:sass', 'sass:compile', 'sass:watch'])
+const del = require('del')
+const gulp = require('gulp')
+const jshint = require('gulp-jshint')
+const sass = require('gulp-sass')
+const sassLint = require('gulp-sass-lint')
+const runSequence = require('run-sequence')
+
+const sourcePath = './src'
+const distributionPath = './dist'
+const jsPath = `${sourcePath}/**/*.js`
+const sassPath = `${sourcePath}/**/*.scss`
+const staticPath = [`${sourcePath}/**/*`, `!${sassPath}`]
+
+// Utilities
+
+gulp.task('clean', () => (
+  del(`${distributionPath}/**/*`)
+))
+
+// Static file Tasks
+
+gulp.task('static:watch', () => (
+   gulp.watch(staticPath, ['build'])
+))
+
+gulp.task('static:copy', () => (
+  gulp.src(staticPath)
+    .pipe(gulp.dest(distributionPath))
+))
+
+// JavaScript Tasks
+
+gulp.task('js:watch', () => (
+  gulp.watch(jsPath, ['js:lint'])
+))
+
+gulp.task('js:lint', () => (
+  gulp.src(jsPath)
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+))
+
+// Sass Tasks
 
 gulp.task('sass:compile', () => (
-		gulp.src('./src/**/*.scss')
-			.pipe(sass())
-			.pipe(gulp.dest('./dest/**/*.css'))
-	))
+  gulp.src(sassPath)
+    .pipe(sass())
+    .pipe(gulp.dest(distributionPath))
+))
+
+gulp.task('sass:lint', () => (
+  gulp.src(sassPath)
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+))
 
 gulp.task('sass:watch', () => (
-	gulp.watch('./src/**/*.scss', ['lint:sass', 'sass:compile'])
-	))
+  gulp.watch(sassPath,
+    ['sass:lint', 'sass:compile']
+  )
+))
 
-gulp.task('lint', ['lint:js', 'lint:sass'])
+// Composed Tasks
 
-gulp.task('lint:js', () => (
-		gulp.src('./dest/**/*.js')
-			.pipe(jshint())
-			.pipe(jshint.reporter('jshint-stylish'))
-	))
-
-gulp.task('lint:sass', () => (
-	gulp.src('src/**/*.scss')
-		.pipe(sassLint.format())
-		.pipe(sassLint.failOnError())
-
-	))
-
-gulp.task('default', ['sass', 'lint'])
+gulp.task('build', () => (
+  runSequence('clean', ['sass:compile', 'static:copy'])
+))
+gulp.task('watch', ['build', 'static:watch', 'js:watch', 'sass:watch'])
+gulp.task('lint', ['js:lint', 'sass:lint'])
+gulp.task('default', ['build'])
