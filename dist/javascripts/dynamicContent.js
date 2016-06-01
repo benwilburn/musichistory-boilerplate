@@ -1,12 +1,16 @@
 'use strict';
 
 $("#listMusic").on("click", function () {
+    $("#list").addClass("active");
     $("#listMusicView").show();
+    $("#add").removeClass("active");
     $("#addMusicView").hide();
 });
 
 $("#addMusic").on("click", function () {
+	$("#list").removeClass("active");
 	$("#listMusicView").hide();
+	$("#add").addClass("active");
 	$("#addMusicView").show();
 });
 

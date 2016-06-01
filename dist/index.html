@@ -4,29 +4,25 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<div class="wholebody">
 		<header>
-			<div class="navdiv">
-				<nav class="top-nav">
-					<ul>
-						<li>
-							<a id="listMusic" href="#" "List Music">List Music</a>
-						</li>
-						<p>|</p>
-						<li>
-							<a id="addMusic" href="#" "Add Music">Add Music</a>
-						</li>
-						<p>|</p>
-						<li>
-							<a id="profile" href="#" "Profile">Profile</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+			<nav>
+				<ul class="nav nav-pills nav-justified">
+					<li id="list" role="presentation" class="active">
+						<a id="listMusic" href="#" "List Music">List Music</a>
+					</li>
+					<li id="add" role="presentation">
+						<a id="addMusic" href="#" "Add Music">Add Music</a>
+					</li>
+					<li id="profile" role="presentation">
+						<a id="profile" href="#" "Profile">Profile</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 
@@ -34,7 +30,7 @@
 		Filter Div: Left
 		-->
 		<div id="listMusicView">
-			<div class="filterdiv">
+			<div class="filterdiv col-lg-2 col-md-2 col-sm-12 col-xs-12">
 					<div>
 						<p>Song Length:</p>
 					</div>
@@ -92,7 +88,7 @@
 		<!--
 		Info Div: Right
 		-->
-			<div id="container" class="infodiv">
+			<div id="musicContent" class="infodiv col-lg-10 col-md-10 col-sm-12 col-xs-12">
 		<!-- 		<div class="songname">
 					<p class="songcolor">Song Name</p>
 					<p>Artist Name</p>

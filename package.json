@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/benwilburn/musichistory-boilerplate#readme",
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
     "gulp-sass": "^2.3.1",
