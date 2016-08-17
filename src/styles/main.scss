@@ -1,0 +1,155 @@
+$nav-background-color: #FFB4B0;
+$filterdiv-background-color: #4DD7FA;
+$infodiv-background-color: #FEFAC0;
+$alternate-text-color: #785616;
+
+
+* {
+	box-sizing: border-box;
+}
+
+.wholebody {
+	margin: 0 auto;
+}
+
+/****************************
+STYLING FOR NAV BAR
+*****************************/
+.navdiv {
+	border: 1.75px;
+	border-style: solid;
+	background-color: $nav-background-color;
+	margin-bottom: 10px;
+	.topnav {
+		li {
+			displat: inline;
+			list-style-type: none;
+			font-size: 11px;
+		}
+		p {
+			display: inline;
+			font-size: 11px;
+		}
+	}
+}
+
+/****************************
+STYLING FOR FILTER DIV
+*****************************/
+
+.filterdiv {
+	border: 1.75px;
+	border-style: solid;
+	background-color: $filterdiv-background-color;
+	padding: 1%;
+	display: inline-block;
+	box-sizing: border-box;
+	div {
+		padding: 1% 0 1% 0;
+		p {
+			font-size: 13px;
+		}
+
+		select {
+			border: 2px;
+			border-style: solid;
+		}
+
+		.checkbox {
+			display: block;
+			text-align: center;
+		}
+
+		.checkboxborder {
+			border: 2px;
+			border-style: solid;
+		}
+
+		.filterbutton {
+			width: 35%;
+			height: 20px;
+			border: 1.75px;
+			border-style: solid;
+			border-radius: 4px;
+			font-size: 12px;
+			text-align: center;
+			margin-top: 12px;
+		}
+	}
+}
+
+
+
+
+.inputWidth {
+	width: 98%;
+}
+
+.buttondiv {
+	text-align: center;
+/* 	padding-top: 70px; */
+	padding-top: 45%;
+}
+
+.divcol{
+	display: inline-block;
+	padding-left: 6%;
+	text-align: left;
+	label {
+		font-size: 13px;
+	}
+}
+
+/* .colpadding {
+	padding-right: 50%;
+} */
+
+/****************************
+STYLING FOR Song Info DIV
+*****************************/
+/*.musicContentContainer {
+	text-align: center;*/
+	.infodiv {
+		text-align: center;
+		border: 1.75px;
+		border-style: solid;
+		background-color: $infodiv-background-color;
+		padding: 10px;
+		font-family: arial, helvetica, sans-serif;
+		display: inline-block;
+		vertical-align: top;
+		box-sizing: border-box;
+		div.row.songcolor {
+			margin-bottom: 20px;
+			padding: 3px;
+			color: $alternate-text-color;
+			display: block;
+			font-size: 12px;
+			margin: 5px 0 3px;
+			font-weight: bolder;
+		}
+	}
+/*}*/
+
+
+// .songname {
+// 	padding-left: 12px;
+// }
+
+/*
+.songname p:not(:first-child) {
+	display: inline;
+	font-size: 8px;
+	padding: 3px;
+} */
+
+.displayNone {
+	display: none;
+}
+
+
+
+
+
+
+

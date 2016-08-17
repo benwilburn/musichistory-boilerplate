@@ -1,15 +1,18 @@
-'use strict';
-var container = document.getElementById("listMusicView");
-var userInput = document.getElementById("addMusicView");
 
-document.getElementById("listMusic").addEventListener("click", function () {
-    userInput.classList.add("displayNone");
-    container.classList.remove("displayNone");
+'use strict';
+
+$("#listMusic").on("click", function () {
+    $("#list").addClass("active");
+    $("#listMusicView").show();
+    $("#add").removeClass("active");
+    $("#addMusicView").hide();
 });
 
-document.getElementById("addMusic").addEventListener("click", function () {
-	container.classList.add("displayNone");
-	userInput.classList.remove("displayNone");
+$("#addMusic").on("click", function () {
+	$("#list").removeClass("active");
+	$("#listMusicView").hide();
+	$("#add").addClass("active");
+	$("#addMusicView").show();
 });
 
 

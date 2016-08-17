@@ -1,0 +1,14 @@
+{
+	"songs": {
+		"sixthSong": {
+			"name": "Back In Black",
+			"artist": "ACDC",
+			"album": "Back in Black"
+		},
+		"seventhSong": {
+			"name": "Little Red Corvette",
+			"artist": "Prince",
+			"album": "1999"
+		}
+	}
+}

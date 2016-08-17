@@ -1,7 +1,6 @@
 'use strict';
 
-
-
+//////////////////// ORIGINAL PAGE POPULATION FUNCTIONALITY ////////////////////////
 $.ajax({
   url: "jsons/songs.json"
 }).done((data) => {
@@ -9,40 +8,103 @@ $.ajax({
 });
 
 
+let containerContent = "";
 
 function populateContainer(data) {
-	let containerContent = "";
 	for(let songNumberName in data.songs){
 		let song = data.songs[songNumberName];
 		let songName = song.name.replace(/[^-\|\w\s\&]/gi, "");
 		let songArtist = song.artist.replace(/[^-\|\w\s\&]/gi, "");
 		let songAlbum = song.album.replace(/[^-\|\w\s\&]/gi, "");
-		containerContent += `<div class="row">${songName} | <strong>${songArtist}</strong> | ${songAlbum} <button class="delete btn btn-danger" type="button">Delete</button></div>`;
+		containerContent += `<div class="row songcolor">${songName} | <strong>${songArtist}</strong> | ${songAlbum} <button class="delete btn btn-danger" type="button">Delete</button></div>`;
 	}
 
+	containerContent += `<div><button type="button" id="more" class="btn btn-default">More</button></div>`;
 
 
-	$("#container").html(containerContent);
+
+	$("#musicContent").html(containerContent);
 
 	$(".delete").on("click", () => {
 		event.target.closest(".row").remove();
-
 	});
 
+
+
+
+/////////////////// ADD SONG FUNCTIONALITY ////////////////////
 	$("#addSong").on("click", () => {
-		localSongObject.newSong
-		let containerContent = "";
 		let song = $("#song").val();
 		let artist = $("#artist").val();
 		let album = $("#album").val();
-		$("#container").append(`<div class="row"> ${song} | <strong>${artist}</strong> | ${album} <button class="delete btn btn-danger" type="button">Delete</button><div>`);
+		$("#more").remove();
+		$("#musicContent").append(`<div class="row songcolor"> ${song} | <strong>${artist}</strong> | ${album} <button class="delete btn btn-danger" type="button">Delete</button><div><div><button type="button" id="more" class="btn btn-default">More</button></div>`);
 		$("#addMusicView").hide();
 		$("#listMusicView").show();
+		$("#add").toggleClass("active");
+		$("#list").toggleClass("active");
+
+		$(".delete").on("click", () => {
+			event.target.closest(".row").remove();
+		});
+
+
+			$("#more").on("click", () => {
+		$("#more").closest("div").remove();
+		$.ajax({
+			url: "jsons/moreSongs.json"
+		}).done((data) => {
+			console.log(data);
+			repopulateContainer(data);
+			$(".delete").on("click", () => {
+				event.target.closest(".row").remove();
+			});
+		});
 	});
+	});
+
+
+
+
+
+
+
+/////////////////////// MORE BUTTON FUNCTIONALITY /////////////////////////
+	$("#more").on("click", () => {
+		$("#more").closest("div").remove();
+		$.ajax({
+			url: "jsons/moreSongs.json"
+		}).done((data) => {
+			repopulateContainer(data);
+			$(".delete").on("click", () => {
+				event.target.closest(".row").remove();
+			});
+		});
+	});
+
+	function repopulateContainer(data) {
+		let moreSongsContent = "";
+		for(let songNumberName2 in data.songs){
+			let song2 = data.songs[songNumberName2];
+			console.log("song2", song2);
+			let songName2 = song2.name.replace(/[^-\|\w\s\&]/gi, "");
+			console.log("songName2", songName2);
+			let songArtist2 = song2.artist.replace(/[^-\|\w\s\&]/gi, "");
+			console.log("songArtist2", songArtist2);
+			let songAlbum2 = song2.album.replace(/[^-\|\w\s\&]/gi, "");
+			console.log("songAlbum2", songAlbum2);
+			moreSongsContent += `<div class="row songcolor">${songName2} | <strong>${songArtist2}</strong> | ${songAlbum2} <button class="delete btn btn-danger" type="button">Delete</button></div>`;
+		}
+
+		moreSongsContent += `<div><button type="button" id="more" class="btn btn-default">More</button></div>`;
+		$("#musicContent").append(moreSongsContent);
+
+		$(".delete").on("click", () => {
+			event.target.closest(".row").remove();
+		});
+	}
+
 }
-
-let localSongObject = {};
-
 
 
 

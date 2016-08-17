@@ -1,0 +1,30 @@
+{
+	"songs": {
+		"firstSong": {
+			"name": "Legs",
+			"artist": "Z*Z Top",
+			"album": "Eliminator"
+		},
+		"secondSong": {
+			"name": "The Logical Song",
+			"artist": "SuperTr@amp",
+			"album": "Breakfast In America"
+		},
+		"thirdSong": {
+			"name": "Another Brick in the Wall",
+			"artist": "Pink Floyd",
+			"album": "The Wall"
+		},
+
+		"fourthSong": {
+			"name": "Welco(me to the Jungle",
+			"artist": "Guns & Roses",
+			"album": "Appetite for Destruction"
+		},
+		"fifthSong": {
+			"name": "Ironi!c",
+			"artist": "Alanis Moris*ette",
+			"album": "Jagged Little Pill"
+		}
+	}
+}
